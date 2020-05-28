@@ -20,9 +20,9 @@ public class SelectCommand implements Command {
 //		2번
 		MemberDAO dao= new MemberDAO();
 		List<MemberDTO> list= dao.selectAll();
-//		3번 데이터 바인딩
+//		3번 데이터 바인딩 list라는 이름으로 받음
 		request.setAttribute("list", list);
-		//4번 dispatcher
+		//4번 dispatcher 데이터 보존을 위해
 		request.getRequestDispatcher("select.jsp").forward(request, response);
 	}
 
