@@ -14,7 +14,7 @@ import kr.co.domain.MemberDTO;
 public class SelectCommand implements Command {
 
 	@Override
-	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public CommandAction execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //	1번 패스
 //		2번
@@ -23,7 +23,7 @@ public class SelectCommand implements Command {
 //		3번 데이터 바인딩 list라는 이름으로 받음
 		request.setAttribute("list", list);
 		//4번 dispatcher 데이터 보존을 위해
-		request.getRequestDispatcher("select.jsp").forward(request, response);
+		return new CommandAction(true, "select.jsp");
 	}
 
 }

@@ -10,15 +10,15 @@ import javax.servlet.http.HttpSession;
 public class LogoutCommand implements Command {
 
 	@Override
-	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public CommandAction execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession(false);
 		if(session != null) {
 			session.invalidate();
 		}
-			response.sendRedirect("select.do");
+			
 		
-		
+		return new CommandAction(true,"select.do");
 	}
 
 }

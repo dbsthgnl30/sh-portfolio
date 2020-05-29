@@ -66,7 +66,14 @@ public class FrontController extends HttpServlet {
 		
 		
 		if (com != null) {
-			com.execute(request, response);
+			CommandAction action =com.execute(request, response);
+			 
+			if(action.isRedirct()) {
+			response.sendRedirect(action.getWhere());	
+			}else {
+				request.getRequestDispatcher(action.getWhere())
+				.forward(request, response);
+			}
 		}
 	}
 

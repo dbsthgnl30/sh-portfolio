@@ -13,7 +13,7 @@ import kr.co.domain.MemberDTO;
 
 public class DeleteCommand implements Command {
 	@Override
-	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public CommandAction execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String id = request.getParameter("id");
 		HttpSession session = request.getSession(false);
@@ -23,18 +23,23 @@ public class DeleteCommand implements Command {
 				if (loginDTO.getId().equals(id)) {
 					MemberDAO dao = new MemberDAO();
 					dao.delete(id);
+					//로그아웃 시킴
+					session.invalidate();
+					return new CommandAction(true, "select.do");
+					
+										
 					// 다시 회원목록으로 돌아가눈 코드
-					response.sendRedirect("select.do");
+					
 				} else {
-					response.sendRedirect("loginui.do");
+					return new CommandAction(true, "loginui.do");
 				}
 				
 			} else {
-				response.sendRedirect("loginui.do");
+				return new CommandAction(true, "loginui.do");
 			}
-//			이 괄호는 왜있찌?
+
 		} else {
-			response.sendRedirect("loginui.do");
+			return new CommandAction(true, "loginui.do");
 		}
 
 	}

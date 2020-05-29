@@ -14,7 +14,7 @@ import kr.co.domain.MemberDTO;
 public class LoginCommand implements Command {
 
 	@Override
-	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public CommandAction execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String id=request.getParameter("id");
 		String pw= request.getParameter("pw");
@@ -29,11 +29,14 @@ public class LoginCommand implements Command {
 			HttpSession session =request.getSession();
 			session.setMaxInactiveInterval(60);
 			session.setAttribute("login", new LoginDTO(id, null));
-			response.sendRedirect("select.do");
+			return new CommandAction(true, "select.do");
+			
 		}else {
 //			로그인 실패시
-			response.sendRedirect("loginui.do");
+			return new CommandAction(true, "loginui.do");
+			
 		}
+		
 
 		
 	}

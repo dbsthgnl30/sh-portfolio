@@ -11,7 +11,7 @@ import kr.co.domain.MemberDTO;
 
 public class UpdateCommand implements Command {
 @Override
-public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+public CommandAction execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	// TODO Auto-generated method stub
 //	1.클라이언트가 보내준데이터 획득/가공 / 클ㄹ라이언트가 보내느 서버는 무조건  String 으로 받는다
 	String id=request.getParameter("id");
@@ -26,8 +26,7 @@ public void execute(HttpServletRequest request, HttpServletResponse response) th
 	MemberDAO dao= new MemberDAO();
 	dao.update(new MemberDTO(id, name, age));
 //	4.포워딩(disapatcher(request),redirect(response))
-	response.sendRedirect("select.do");
-
+	return new CommandAction(true, "select.do");
 
 
 

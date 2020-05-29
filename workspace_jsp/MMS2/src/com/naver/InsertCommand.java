@@ -12,7 +12,7 @@ import kr.co.domain.MemberDTO;
 public class InsertCommand implements Command {
 
 	@Override
-	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public CommandAction execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		데이터 받아오기
 		String id = request.getParameter("id");
@@ -32,7 +32,8 @@ public class InsertCommand implements Command {
 //			회원가입을 했으니 조회목으로 가는데 주소창이 바뀌는게 낫다 redirect
 		//frontController로 가는데 그 이유가 
 //		insert에서 db로 보낸 데이터를 묶어서 select 로 보내줘야 하니 db에 갔다옴
-		response.sendRedirect("select.do");
+		return new CommandAction(true, "select.do");
+		
 
 	}
 }

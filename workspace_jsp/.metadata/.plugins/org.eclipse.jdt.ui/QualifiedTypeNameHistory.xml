@@ -24,9 +24,9 @@
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="kr.co.domain.MemberDTO"/>
 <fullyQualifiedTypeName name="kr.co.dao.MemberDAO"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-<fullyQualifiedTypeName name="kr.co.domain.LoginDTO"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="kr.co.domain.LoginDTO"/>
 </qualifiedTypeNameHistroy>
