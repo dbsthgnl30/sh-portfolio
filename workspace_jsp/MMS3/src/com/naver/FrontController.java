@@ -36,7 +36,10 @@ public class FrontController extends HttpServlet {
 		String sp=uri.substring(ctxp.length()) ;
 		Command com= null;
 		System.out.println(sp);
+		
+		
 		//처음에 command랑 commandAction 만들기 그리고 selectcommand 만들기
+		//swich문으로 하면 더 간결
 		if(sp.equalsIgnoreCase("/select.bo")){
 			com = new SelectCommand();
 		}else if(sp.equalsIgnoreCase("/insertui.bo")) {
@@ -44,8 +47,8 @@ public class FrontController extends HttpServlet {
 		}else if(sp.equalsIgnoreCase("/insert.bo")) {
 			com= new InsertCommand();
 		}else if(sp.equalsIgnoreCase("/selectById.bo")) {
-			com= new SelectByIdCommand();
-		}else if(sp.equalsIgnoreCase("/updateui.bo")) {
+			com= new SelectByIdCommand();22
+		/*}else if(sp.equalsIgnoreCase("/updateui.bo")) {
 			com = new UpdateUICommand();
 		}else if(sp.equalsIgnoreCase("/update.bo")) {
 			com= new UpdateCommand();
@@ -54,9 +57,13 @@ public class FrontController extends HttpServlet {
 			
 		}else if(sp.equalsIgnoreCase("/login.bo")) {
 			com= new LoginCommand();
+		}else if(sp.equalsIgnoreCase("/logout.bo")) {
+			com= new LogoutCommand();
+		}else if(sp.equalsIgnoreCase("/delete.bo")) {
+			com= new DeleteCommand();
 		}
 		
-		
+		*/
 		
 		else {
 			System.out.println("제공하지 않는 서비스입니다.");
@@ -73,6 +80,9 @@ public class FrontController extends HttpServlet {
 			
 			if(action.isRedirect()) {
 				response.sendRedirect(action.getWhere());
+				
+				
+				
 			}else {
 				request.getRequestDispatcher(action.getWhere()).forward(request,response);
 			}

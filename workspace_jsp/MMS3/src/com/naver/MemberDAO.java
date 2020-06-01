@@ -120,6 +120,7 @@ public class MemberDAO {
 			conn = dataFactory.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
+			pstmt.executeUpdate();
 		} catch (Exception e) {
 			// TODO: handle exception
 		} finally {

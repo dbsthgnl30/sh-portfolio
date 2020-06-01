@@ -36,43 +36,36 @@ public class FrontController extends HttpServlet {
 		String ctxp = request.getContextPath();
 		String sp = uri.substring(ctxp.length());
 		Command com = null;
-		
 
 		if (sp.equalsIgnoreCase("/insertui.do")) {
 			com = new InsertUICommand();
 		} else if (sp.equalsIgnoreCase("/insert.do")) {
-
 			com = new InsertCommand();
 		} else if (sp.equalsIgnoreCase("/select.do")) {
 			com = new SelectCommand();
-		}else if(sp.equalsIgnoreCase("/selectById.do")) {
-			com=new selectByIdCommand();
-		}else if(sp.equalsIgnoreCase("/UpdateUI.do")) {
-		com=new UpdateUICommand();
-		}else if(sp.equalsIgnoreCase("/Update.do")) {
-			com=new UpdateCommand();
-		}else if(sp.equalsIgnoreCase("/Delete.do")) {
-			com=new DeleteCommand();
-		}else if(sp.equalsIgnoreCase("/loginUI.do")) {
-			com=new LoginUICommand();
-		}else if(sp.equalsIgnoreCase("/login.do")){
-			com= new LoginCommand();
-		}else if(sp.equalsIgnoreCase("/Logout.do")) {
-			com=new LogoutCommand();
+		} else if (sp.equalsIgnoreCase("/selectById.do")) {
+			com = new selectByIdCommand();
+		} else if (sp.equalsIgnoreCase("/UpdateUI.do")) {
+			com = new UpdateUICommand();
+		} else if (sp.equalsIgnoreCase("/Update.do")) {
+			com = new UpdateCommand();
+		} else if (sp.equalsIgnoreCase("/Delete.do")) {
+			com = new DeleteCommand();
+		} else if (sp.equalsIgnoreCase("/loginUI.do")) {
+			com = new LoginUICommand();
+		} else if (sp.equalsIgnoreCase("/login.do")) {
+			com = new LoginCommand();
+		} else if (sp.equalsIgnoreCase("/Logout.do")) {
+			com = new LogoutCommand();
 		}
-		
-		
-		
-		
-		
+
 		if (com != null) {
-			CommandAction action =com.execute(request, response);
-			 
-			if(action.isRedirct()) {
-			response.sendRedirect(action.getWhere());	
-			}else {
-				request.getRequestDispatcher(action.getWhere())
-				.forward(request, response);
+			CommandAction action = com.execute(request, response);
+
+			if (action.isRedirct()) {
+				response.sendRedirect(action.getWhere());
+			} else {
+				request.getRequestDispatcher(action.getWhere()).forward(request, response);
 			}
 		}
 	}

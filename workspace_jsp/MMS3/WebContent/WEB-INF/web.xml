@@ -9,4 +9,27 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <filter>
+  <filter-name>fmy</filter-name>
+  <filter-class>com.naver.MyFilter</filter-class>
+  </filter>
+  
+   <filter>
+  <filter-name>fyour</filter-name>
+  <filter-class>com.naver.YourFilter</filter-class>
+  </filter>
+  
+  
+    <filter-mapping>
+  <filter-name>fyour</filter-name>
+  <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <filter-mapping>
+  <filter-name>fmy</filter-name>
+  <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+ 
+  
 </web-app>
