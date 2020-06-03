@@ -8,7 +8,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="${empty login?'loginui.bo':'logout.bo'}">${empty login?'로그인':'로그아웃'}</a>
+<%-- <a href="${empty login?'loginui.bo':'logout.bo'}">
+${empty login?'로그인':'로그아웃'}</a> --%>
+
+<c:if test="empty login ">
+<a href="loginui.bo">로그인</a>
+</c:if>
+
+<c:if test=" not empty login">
+<a href="logout.bo">로그아웃</a>
+</c:if>
+
 <a href="insertui.bo">회원가입</a>
 <h1>회원목록</h1>
 
