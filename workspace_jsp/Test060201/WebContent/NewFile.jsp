@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>본문입니다.</h1>
-<%@ include file ="part1.jsp" %>
+<%@ include file ="part1.jsp"%>
 <hr>
 <jsp:include page="part2.jsp"/>
 <hr>
