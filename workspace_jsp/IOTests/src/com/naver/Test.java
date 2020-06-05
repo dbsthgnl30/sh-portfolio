@@ -60,7 +60,9 @@ public class Test {
 		}
 	}
 
-//buffered in.outputStream
+//
+
+	
 	public void me3() {
 		File f1 = new File("C:" + File.separator + "show.jpg");
 		File f2 = new File("C:", "copyshow.jpg");
