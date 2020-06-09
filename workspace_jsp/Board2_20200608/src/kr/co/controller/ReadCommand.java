@@ -23,7 +23,7 @@ public class ReadCommand implements Command {
 		num =Integer.parseInt(snum);
 	}
 		BoardDAO dao= new BoardDAO();
-		//reae=select 3번째 num을 dao에read메소트를 통해 받아와ㅏ서 dto(급식판)에 넣어줘
+		//read=select 3번째 num을 dao에read메소트를 통해 받아와ㅏ서 dto(급식판)에 넣어줘
 		BoardDTO dto= dao.read(num);
 		//데이터 바인딩 (묶는작업)
 		request.setAttribute("dto", dto);

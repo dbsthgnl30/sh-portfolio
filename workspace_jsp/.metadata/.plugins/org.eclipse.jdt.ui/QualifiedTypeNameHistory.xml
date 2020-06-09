@@ -51,11 +51,13 @@
 <fullyQualifiedTypeName name="kr.co.command.Command"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="kr.co.dao.BoardDAO"/>
-<fullyQualifiedTypeName name="kr.co.domain.BoardDTO"/>
-<fullyQualifiedTypeName name="kr.co.domain.CommandAaction"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="sun.font.CreatedFontTracker"/>
-<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="kr.co.domain.CommandAaction"/>
+<fullyQualifiedTypeName name="kr.co.dao.BoardDAO"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="kr.co.domain.BoardDTO"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.patterns.StepPattern"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 </qualifiedTypeNameHistroy>

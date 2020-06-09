@@ -108,7 +108,7 @@ public class BoardDAO {
 		}
 
 	}
-
+	
 	private int createNum(Connection conn) {
 		PreparedStatement pstmt = null;
 		String sql = "select max(num) from board";
