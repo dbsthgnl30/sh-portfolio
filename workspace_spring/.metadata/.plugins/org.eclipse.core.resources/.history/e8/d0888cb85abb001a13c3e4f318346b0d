@@ -1,0 +1,31 @@
+package kr.or.Controller;
+
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import kr.co.domain.DepartDTO;
+import kr.co.service.DepartService;
+
+@Controller
+ @RequestMapping("depart") 
+public class DepartController {
+
+	
+	 @Inject 
+	 private DepartService dService;
+	 
+	 @RequestMapping(value = "/insert", method=RequestMethod.GET)
+	 public void insert() {
+		 
+	 }
+	
+	@RequestMapping(value = "/insert", method=RequestMethod.POST)
+	public String insert(DepartDTO dto) {
+		
+		dService.insert(dto);
+		return "redirct:/depart/list";
+	}
+}

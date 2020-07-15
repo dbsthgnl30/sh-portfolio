@@ -1,0 +1,21 @@
+package kr.co.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import kr.co.domain.DepartDTO;
+import kr.co.persistence.DepartDAO;
+
+@Service
+@Transactional
+public class DepartServiceImpl implements DepartService{
+@Autowired
+private DepartDAO departDAO;
+
+@Override
+public void insert(DepartDTO dto) {
+	departDAO.insert(dto);
+}
+
+}

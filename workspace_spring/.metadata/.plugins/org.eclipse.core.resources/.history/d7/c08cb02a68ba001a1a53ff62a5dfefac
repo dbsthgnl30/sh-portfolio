@@ -1,0 +1,14 @@
+package com.naver.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class MyController {
+
+//	mvc핸들러
+	@RequestMapping(value= "hello",RequestMethod.GET)
+	public String hello() {
+	return "hello";
+	}
+}

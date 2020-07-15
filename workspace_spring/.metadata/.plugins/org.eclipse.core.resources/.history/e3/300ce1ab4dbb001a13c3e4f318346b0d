@@ -1,0 +1,68 @@
+package kr.co.domain;
+
+public class DepartDTO {
+private String did;
+private String  dname;
+private String dage;
+
+public DepartDTO() {
+	// TODO Auto-generated constructor stub
+}
+
+public DepartDTO(String did, String dname, String dage) {
+	super();
+	this.did = did;
+	this.dname = dname;
+	this.dage = dage;
+}
+
+@Override
+public int hashCode() {
+	final int prime = 31;
+	int result = 1;
+	result = prime * result + ((dage == null) ? 0 : dage.hashCode());
+	return result;
+}
+
+@Override
+public boolean equals(Object obj) {
+	if (this == obj)
+		return true;
+	if (obj == null)
+		return false;
+	if (getClass() != obj.getClass())
+		return false;
+	DepartDTO other = (DepartDTO) obj;
+	if (dage == null) {
+		if (other.dage != null)
+			return false;
+	} else if (!dage.equals(other.dage))
+		return false;
+	return true;
+}
+
+public String getDid() {
+	return did;
+}
+
+public void setDid(String did) {
+	this.did = did;
+}
+
+public String getDname() {
+	return dname;
+}
+
+public void setDname(String dname) {
+	this.dname = dname;
+}
+
+public String getDage() {
+	return dage;
+}
+
+public void setDage(String dage) {
+	this.dage = dage;
+}
+
+}

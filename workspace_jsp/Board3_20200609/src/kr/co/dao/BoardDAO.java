@@ -59,6 +59,7 @@ public class BoardDAO {
 		try {
 			conn = datafactory.getConnection();
 			pstmt = conn.prepareStatement(sql);
+			//pstmt가 받아온
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				int num = rs.getInt("num");

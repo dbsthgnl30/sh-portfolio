@@ -1,0 +1,20 @@
+package kr.or.Controller;
+
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import kr.co.service.DepartService;
+
+@Controller
+@RequestMapping("depart")
+public class DepartController {
+	@Inject
+	private DepartService dService;
+	
+	@RequestMapping("/insert")
+	public void insert() {
+		 
+	}
+}

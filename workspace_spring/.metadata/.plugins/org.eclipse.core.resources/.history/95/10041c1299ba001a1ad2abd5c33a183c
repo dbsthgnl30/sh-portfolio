@@ -1,0 +1,5 @@
+package kr.co.persistence;
+@Repository
+public class MemberDAOImpl implements MemberDAO {
+
+}

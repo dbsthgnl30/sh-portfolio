@@ -1,0 +1,16 @@
+package com.naver.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+public class MyController {
+
+//	mvc핸들러
+	@RequestMapping(value= "hello",method=RequestMethod.GET)
+	public String hello() {
+//		   vie페이지의 이름
+	return "hello";
+	}
+}

@@ -1,0 +1,8 @@
+package kr.co.ca;
+
+import org.junit.runner.RunWith;
+
+@RunWith
+public class DataSourceTest {
+
+}

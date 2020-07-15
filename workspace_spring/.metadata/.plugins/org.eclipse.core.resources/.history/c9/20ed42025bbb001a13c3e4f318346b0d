@@ -1,0 +1,9 @@
+package kr.co.persistence;
+
+import kr.co.domain.DepartDTO;
+
+public interface DepartDAO {
+
+	void insert(DepartDTO dto);
+
+}

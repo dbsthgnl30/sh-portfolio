@@ -1,0 +1,5 @@
+package kr.or.Controller;
+
+public interface DepartService {
+
+}

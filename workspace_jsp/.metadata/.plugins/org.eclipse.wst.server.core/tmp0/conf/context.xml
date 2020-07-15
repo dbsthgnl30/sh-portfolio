@@ -26,6 +26,6 @@
 	<Resource name="jdbc/oracle11g" auth="Container"
 		type="javax.sql.DataSource"
 		driverClassName="oracle.jdbc.driver.OracleDriver"
-		url="jdbc:oracle:thin:@localhost:1521:xe" username="ca3"
-		password="ca3" maxTotal="4" maxWaitMillis="5000" />
+		url="jdbc:oracle:thin:@localhost:1521:xe" username="ca4"
+		password="ca4" maxTotal="4" maxWaitMillis="5000" />
 </Context>

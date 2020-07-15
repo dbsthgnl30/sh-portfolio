@@ -1,0 +1,21 @@
+package kr.co.persistence;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import kr.co.service.MemberService;
+
+@Repository
+public class MemberDAOImpl implements MemberService {
+@Autowired
+private SqlSession session;
+
+private final String NS="m.e.m";
+
+
+@override
+public void insert(MemberDTO dto) {
+	session.insert("NS.insert, dto);
+}
+}

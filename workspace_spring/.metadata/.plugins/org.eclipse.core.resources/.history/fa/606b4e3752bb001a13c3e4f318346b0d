@@ -1,0 +1,12 @@
+package kr.co.service;
+
+import kr.co.domain.DepartDTO;
+
+public interface DepartService {
+
+	static void insert(DepartDTO dto) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

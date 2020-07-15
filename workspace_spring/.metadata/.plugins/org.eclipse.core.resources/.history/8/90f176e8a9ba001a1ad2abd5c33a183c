@@ -1,0 +1,12 @@
+package kr.co.service;
+
+import kr.co.domain.MemberDTO;
+
+public interface MemberService {
+
+	static void insert(MemberDTO dto) {
+		
+		
+	}
+
+}

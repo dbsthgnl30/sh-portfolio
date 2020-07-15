@@ -43,10 +43,11 @@
 			</c:forEach>
 		</tbody>
 	</table>
+			        <!-- 현재페이지-1이 0보다 -->   <!--크면-현재페이지-1 작으면 1페이지 -->
 	<a href="list.do?curPage=${to.curPage-1> 0 ? (to.curPage-1):1}">&laquo;</a>&nbsp;&nbsp;
-	
+						<!--시작페이지  --> 		    <!--마지막페이지  -->
 	<c:forEach begin="${to.beginPageNum}" end="${to.stopPageNum}" var="idx">
-
+						<!--현재페이지가   -->
 		<c:if test="${to.curPage == idx }">
 			<a style="font-size: 20px;" href="list.do?curPage=${idx}">${idx}</a> &nbsp;&nbsp;
 		

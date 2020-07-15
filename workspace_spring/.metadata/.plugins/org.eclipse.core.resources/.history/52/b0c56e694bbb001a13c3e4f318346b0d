@@ -1,0 +1,15 @@
+package kr.or.Controller;
+
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Controller;
+
+import kr.co.service.DepartService;
+
+@Controller
+public class DepartController {
+	@Inject
+	private DepartService dService;
+	
+	
+}

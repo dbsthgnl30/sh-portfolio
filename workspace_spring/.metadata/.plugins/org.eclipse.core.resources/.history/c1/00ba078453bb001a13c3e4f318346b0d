@@ -1,0 +1,14 @@
+package kr.co.persistence;
+
+import javax.inject.Inject;
+
+import org.apache.ibatis.session.SqlSession;
+
+public class DepartDAOImpl implements DepartDAO {
+
+	@Inject
+	private SqlSession session;
+	
+	private final String NS ="d.e.p";
+	
+}
